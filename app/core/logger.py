@@ -2,7 +2,7 @@ import sys
 from os.path import join
 from loguru import logger
 
-from core.config import settings
+from app.core.config import settings
 
 
 def setup_logging():

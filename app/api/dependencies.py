@@ -1,12 +1,12 @@
 from functools import lru_cache
 
-from core.logger import logger
-from core.config import settings
+from app.core.logger import logger
+from app.core.config import settings
 
-from infrastructure.ai_service import OpenAIArticleGenerator
-from infrastructure.cache_service import RedisCache
-from infrastructure.rss_service import WordsmithRSSReader
-from use_cases.article_generator import ArticleGeneratorUseCase
+from app.infrastructure.ai_service import OpenAIArticleGenerator
+from app.infrastructure.cache_service import RedisCache
+from app.infrastructure.rss_service import WordsmithRSSReader
+from app.use_cases.article_generator import ArticleGeneratorUseCase
 
 
 @lru_cache

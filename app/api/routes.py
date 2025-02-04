@@ -1,10 +1,9 @@
 from fastapi import APIRouter, Depends, HTTPException
 
-from core.logger import logger
-from schemas.article_schema import ArticleResponse
-from use_cases.article_generator import ArticleGeneratorUseCase
-from api.dependencies import get_article_generator_use_case
-from core.exceptions import WordOfDayException
+from app.schemas.article_schema import ArticleResponse
+from app.use_cases.article_generator import ArticleGeneratorUseCase
+from app.api.dependencies import get_article_generator_use_case
+from app.core.exceptions import WordOfDayException
 
 
 router = APIRouter(prefix="/article", tags=["article"])

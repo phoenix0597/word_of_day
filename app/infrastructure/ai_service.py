@@ -1,11 +1,11 @@
 import openai
 from datetime import datetime
 
-from core.logger import logger
-from core.config import settings
-from core.exceptions import AIGenerationError
-from domain.interfaces import AIGenerator
-from domain.entities import Article, WordOfDay
+from app.core.logger import logger
+from app.core.config import settings
+from app.core.exceptions import AIGenerationError
+from app.domain.interfaces import AIGenerator
+from app.domain.entities import Article, WordOfDay
 
 
 class OpenAIArticleGenerator(AIGenerator):

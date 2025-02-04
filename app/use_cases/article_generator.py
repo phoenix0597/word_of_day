@@ -1,7 +1,7 @@
 from datetime import datetime, timezone
 
-from domain.interfaces import RSSReader, AIGenerator, CacheService
-from core.logger import logger
+from app.domain.interfaces import RSSReader, AIGenerator, CacheService
+from app.core.logger import logger
 
 
 class ArticleGeneratorUseCase:

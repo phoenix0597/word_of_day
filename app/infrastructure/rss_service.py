@@ -1,10 +1,10 @@
 import aiohttp
 import xml.etree.ElementTree as ET
 
-from core.logger import logger
-from domain.interfaces import RSSReader
-from domain.entities import WordOfDay
-from core.exceptions import RSSFeedError
+from app.core.logger import logger
+from app.domain.interfaces import RSSReader
+from app.domain.entities import WordOfDay
+from app.core.exceptions import RSSFeedError
 
 
 class WordsmithRSSReader(RSSReader):

@@ -1,10 +1,12 @@
+import os
+
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from functools import lru_cache
 from os.path import dirname, abspath
 
 
 class Settings(BaseSettings):
-    BASE_DIR: str = abspath(dirname(dirname(__file__)))
+    BASE_DIR: str = abspath(dirname(dirname(dirname(__file__))))
 
     # API settings
     API_V1_STR: str = "/api/v1"
@@ -26,7 +28,9 @@ class Settings(BaseSettings):
     REDIS_MAX_KEYS: int
     REDIS_TTL: int
 
-    model_config = SettingsConfigDict(env_file=".env", extra="allow")
+    model_config = SettingsConfigDict(
+        env_file=".env" if not os.getenv("TESTING") else ".env.test", extra="allow"
+    )
 
 
 @lru_cache

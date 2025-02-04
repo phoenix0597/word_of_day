@@ -2,11 +2,11 @@ import redis.asyncio as redis
 import json
 from datetime import datetime, timezone
 
-from core.logger import logger
-from domain.interfaces import CacheService
-from domain.entities import Article
-from core.exceptions import CacheError
-from core.config import settings
+from app.core.logger import logger
+from app.domain.interfaces import CacheService
+from app.domain.entities import Article
+from app.core.exceptions import CacheError
+from app.core.config import settings
 
 
 class RedisCache(CacheService):

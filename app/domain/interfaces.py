@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from domain.entities import Article, WordOfDay
+from app.domain.entities import Article, WordOfDay
 
 
 class RSSReader(ABC):
