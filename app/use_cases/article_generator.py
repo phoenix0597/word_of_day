@@ -34,9 +34,9 @@ class ArticleGeneratorUseCase:
 
     @staticmethod
     def _is_article_valid(article):
-        today = datetime.now(timezone.utc).date().isoformat()
+        today = datetime.now(timezone.utc).date()
         logger.info(f"Today: {today=}")
-        article_date = datetime.fromisoformat(article.created_at).date().isoformat()
+        article_date = article.created_at.date()
         logger.info(f"Article date: {article_date=}")
         logger.info(f"Is article valid: {article_date == today}")
         return article_date == today
